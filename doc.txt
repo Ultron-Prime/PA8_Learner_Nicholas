@@ -1,0 +1,78 @@
+This is the documentation for Nicholas Learner's Proj8 for CS 202-1001 at UNR, due @ midnight, 11-13-19.
+
+The files for this project (provided under Files on UNR Canvas) are used as-is, except for an addition to the
+Node class declaration/implementation: the function next(), which returns the Node * m_next private variable
+in order for it to be accessible by the << operator (the insertion operator) used to output the NodeList
+object.
+
+The purpose of this program is to create and use two different kinds of lists in C++.
+
+The const qualification used in the [] operators (bracket operators) will not be specifically tested for
+either ArrayList or NodeList.
+
+Most methods for both classes do not output anything to the console, unless there is an error within that
+method.
+
+Program Output:
+
+"Testing ArrayList << and dflt ctor" - Same as below
+
+"Testing NodeList << and dflt ctor" - Since no data has been inputted, no data is outputted.
+
+
+"Testing ArrayList << and para ctor"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}" - The ArrayList object has been initialized with size 7 and data that had been initialized
+earlier.
+
+"Testing NodeList << and para ctor"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}" - The NodeList object has been initialized with size 9 and data that had been initialized
+earlier.
+
+"Testing ArrayList << and copy ctor"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}" - The ArrayList object has been initialized using the previous ArrayList object.
+
+"Testing NodeList << and copy ctor"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}"
+"{2,-2.2}" - The NodeList object has been initialized using the previous NodeList object.
+
+"Testing ArrayList insertAfter()"
+"{4,-4.4}"
+"{5,-5.5}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}"
+"{4,-4.4}" - First, the target {4,-4.4} was found, and then the m_array was resized (and the target was refound) and another DataType object was inserted into the m_array.
+
+"Testing NodeList insertAfter()" - Here I wasn't able to find the cause of a malloc error that breaks my
+program. According to online sources, the error happens when an earlier loop goes out-of-bounds, but I have
+been unable to find that loop. Other than this problem, I believe the program would work.
+
